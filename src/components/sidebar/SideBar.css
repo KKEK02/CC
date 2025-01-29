@@ -1,0 +1,50 @@
+.pages{
+    display: flex;
+    flex-direction: column;
+    margin-top: 2vh;
+}
+
+.sidebar {
+    position: fixed;
+    top: calc(12vh); /* Adjust according to the height of your header */
+    left: 0;
+    width: 18vw; /* Width when sidebar is open */
+    height: calc(100vh - 12vh); /* Adjust according to the height of your header */
+    background-color: black;
+    overflow-x: hidden;
+    transition: 0.8s;
+}
+
+.sidebar.closed {
+    width: 6vw; /* Width when sidebar is closed */
+}  
+
+.sidebar img {
+    width: 3.5vw;
+    height: 7vh;
+    margin: 1vh;
+    padding: 1vh;
+    border-radius: 2vh;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+.sidebar img:hover{
+    transform: scale(1.1);
+    border: 0.5vh solid aqua;
+    
+}
+
+
+.sidebar p{
+    color: white;
+    font-size: 1.3vw;
+    margin-left: 7vw;
+    margin-top: -8vh;
+    padding: 0;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+.sidebar p:hover{
+    color: aqua;
+    transform: scale(1.15);
+}

@@ -1,0 +1,90 @@
+/* General Alert Box Styling */
+.alert-box {
+    /*width: 20vw;
+    height: 12vh;*/
+    width: fit-content;
+    height: fit-content;
+    position: fixed;
+    top: 20px; /* Position the alert at the top */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Adjust for centering */
+    border-radius: 8px;
+    padding: 16px 24px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+    z-index: 9999; /* Ensure it appears on top of other elements */
+  }
+  
+  .alert-box.show {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  /* Success Alert Styles */
+  .alert-success {
+    background-color: white; /* Light green */
+    border: 2px solid #28a745;
+    color: #155724;
+  }
+  
+  .alert-success .icon {
+    color: #28a745; /* Green tick */
+    
+  }
+  
+  /* Error Alert Styles */
+  .alert-error {
+    background-color: white; /* Light red */
+    border: 2px solid #dc3545;
+    color: #721c24;
+  }
+  
+  .alert-error .icon {
+    color: #dc3545; /* Red cross */
+  }
+  
+  /* Icon Styling */
+  .icon {
+    font-size: 6vh;
+    font-weight: bold;
+  }
+  
+    /* Message Styling */
+p{
+    font-size: 3vh;
+    font-weight: bold;
+    margin-left: 1vw;
+}
+
+  /* Underline Animation */
+  .underline {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 1vh;
+    width: 0;
+    animation: underline-expand 3s linear forwards;
+  }
+  
+  .alert-success .underline {
+    background-color: #28a745; /* Green underline */
+  }
+  
+  .alert-error .underline {
+    background-color: #dc3545; /* Red underline */
+  }
+  
+  @keyframes underline-expand {
+    0% {
+      width: 0;
+    }
+    100% {
+      width: 100%;
+    }
+  }
+  
